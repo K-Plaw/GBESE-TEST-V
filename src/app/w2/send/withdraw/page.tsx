@@ -12,11 +12,11 @@ const WithdrawFunds: React.FC = () => {
     const router = useRouter();
 
     const handleContinue = () => {
-    router.push('.w2/send/withdraw/select-bank/');
+    router.push('/w2/send/withdraw/select-bank/');
     };
 
     const handleBack1 = () => {
-    router.push('w2/send/page');
+    router.push('/w2/send/page');
     };
 
 
