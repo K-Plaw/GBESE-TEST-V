@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import TopNavbar from '../../../../components/layout/TopNavbar';
 import { useRouter } from 'next/router';
 
 const WithdrawFunds: React.FC = () => {
@@ -43,8 +42,6 @@ const WithdrawFunds: React.FC = () => {
 
   return (
     <>
-      <TopNavbar />
-
       <div className="min-h-screen bg-gray-50 px-4 pt-24">
         <div className="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-sm border">
           <button 
