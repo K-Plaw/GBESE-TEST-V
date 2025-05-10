@@ -1,9 +1,7 @@
-"use client";
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import TopNavbar from '../../../../components/layout/TopNavbar';
-import { useRouter } from 'next/navigation'; // ✅ Updated import
+import { useRouter } from 'next/router';
 
 const WithdrawFunds: React.FC = () => {
   const [balance, setBalance] = useState<number | null>(null);
@@ -17,7 +15,7 @@ const WithdrawFunds: React.FC = () => {
     };
 
     const handleBack1 = () => {
-    router.push('../../send/page');
+    router.push('../page');
     };
 
 
