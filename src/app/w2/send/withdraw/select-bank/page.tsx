@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import TopNavbar from '../../../../../components/layout/TopNavbar';
 import { fetchBanks, Bank } from '../../../../../lib/banks';
 import { useRouter } from 'next/navigation'; // ✅ Updated import
 import Link from 'next/link';
@@ -12,7 +11,7 @@ const SelectBank: React.FC = () => {
   const router = useRouter();
 
   const handleBack2 = () => {
-    router.push('/WithdrawFunds'); // ✅ Works with next/navigation
+    router.push('/w2/send/withdraw'); // ✅ Works with next/navigation
   };
 
   useEffect(() => {
@@ -24,8 +23,7 @@ const SelectBank: React.FC = () => {
 
   return (
     <>
-      <TopNavbar />
-
+      
       <div className="min-h-screen bg-gray-50 px-4 pt-24">
         <div className="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-sm border">
           <button className="text-sm text-gray-500 mb-4 hover:underline" onClick={handleBack2}>

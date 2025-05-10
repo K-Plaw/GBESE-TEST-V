@@ -16,7 +16,7 @@ const WithdrawFunds: React.FC = () => {
     };
 
     const handleBack1 = () => {
-    router.push('/w2/send/page');
+    router.push('/w2/send/');
     };
 
 
