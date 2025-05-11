@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic"; // this line to prevent prerendering
+
 import React from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 
