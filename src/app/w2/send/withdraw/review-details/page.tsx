@@ -1,18 +1,25 @@
 "use client";
 
-export const dynamic = "force-dynamic"; // 👈 Add this line to prevent prerendering
-
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+
+export const dynamic = "force-dynamic";
 
 const ReviewDetails: React.FC = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const recipient = searchParams.get("recipient") || "";
-  const accountNumber = searchParams.get("accountNumber") || "";
-  const bankName = searchParams.get("bankName") || "";
-  const amount = searchParams.get("amount") || "";
+  const [recipient, setRecipient] = useState("");
+  const [accountNumber, setAccountNumber] = useState("");
+  const [bankName, setBankName] = useState("");
+  const [amount, setAmount] = useState("");
+
+  useEffect(() => {
+    setRecipient(searchParams.get("recipient") || "");
+    setAccountNumber(searchParams.get("accountNumber") || "");
+    setBankName(searchParams.get("bankName") || "");
+    setAmount(searchParams.get("amount") || "");
+  }, [searchParams]);
 
   const handleBack = () => {
     router.back();
