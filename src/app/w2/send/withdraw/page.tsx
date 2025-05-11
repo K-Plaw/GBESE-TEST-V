@@ -64,10 +64,12 @@ const WithdrawFunds: React.FC = () => {
             <div className="flex items-center border rounded-md px-3 py-2">
               <input
                 type="text"
-                id="amount"
-                placeholder="₦5,000"
                 value={amount}
-                onChange={(e) => setAmount(e.target.value)}
+                placeholder="₦5,000"
+                onChange={(e) => {
+                  setAmount(e.target.value);
+                  localStorage.setItem("withdrawAmount", e.target.value);
+                }}
                 className="flex-1 bg-transparent focus:outline-none"
               />
               <button
