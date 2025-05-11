@@ -1,6 +1,6 @@
 "use client";
 
-export const dynamic = "force-dynamic"; // this line to prevent prerendering
+export const dynamic = "force-dynamic"; // 👈 Add this line to prevent prerendering
 
 import React from "react";
 import { useSearchParams, useRouter } from "next/navigation";
@@ -19,16 +19,13 @@ const ReviewDetails: React.FC = () => {
   };
 
   const handleConfirm = () => {
-    router.push('/w2/send/withdraw/success'); // Navigate to success page
+    router.push('/w2/send/withdraw/success');
   };
 
   return (
     <div className="min-h-screen bg-gray-50 px-4 pt-24">
       <div className="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-sm border">
-        <button
-          className="text-sm text-gray-500 mb-4 hover:underline"
-          onClick={handleBack}
-        >
+        <button className="text-sm text-gray-500 mb-4 hover:underline" onClick={handleBack}>
           &larr; Back
         </button>
 
